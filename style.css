@@ -30,22 +30,64 @@
 }
 
 
+/* Full Screen Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark Overlay */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Website Content */
+.content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
 :root {
-  --bg: #f8f6f1;
-  --surface: #ffffff;
-  --surface-soft: #f0ede6;
-  --text: #24221f;
-  --muted: #77736c;
-  --accent: #c46b43;
-  --accent-dark: #9e4d2e;
-  --border: #e8e2d9;
-  --shadow: 0 15px 45px rgba(40, 30, 20, .08);
+  /* Brand Colors */
+  --bg: #a3daa9;
+  --surface: #FFFFFF;
+  --surface-soft: #E3EBE5;
+
+  /* Text Colors */
+  --text: #26342D;
+  --muted: #66766D;
+
+  /* Green Theme */
+  --accent: #3F6656;
+  --accent-dark: #214B3B;
+
+  /* Borders & Shadows */
+  --border: hsl(132, 74%, 36%);
+  --shadow: 0 15px 45px rgba(33, 75, 59, .10);
+
   --radius: 18px;
+
   --heading: 'Sora', sans-serif;
   --body: 'Inter', sans-serif;
 }
-
 /* RESET */
 
 * {
@@ -339,6 +381,186 @@ img {
   font-size: 11px;
   color: var(--muted);
   font-weight: 600;
+}
+
+/* Full Width Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #111;
+}
+
+/* Full Horizontal Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Content Above Video */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 6vw, 75px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #d16b42;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 75vh;
+        min-height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+.floating-whatsapp {
+    position: floating;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-whatsapp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.floating-insta {
+    position: floating;
+    right: 25px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-insta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* Common Floating Social Buttons */
+.floating-whatsapp,
+.floating-insta {
+    position: fixed;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Instagram Button */
+.floating-insta {
+    bottom: 100px;
+}
+
+/* WhatsApp Button */
+.floating-whatsapp {
+    bottom: 25px;
+}
+
+/* Social Icons */
+.floating-whatsapp img,
+.floating-insta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.floating-whatsapp:hover,
+.floating-insta:hover {
+    transform: scale(1.12);
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    .floating-whatsapp,
+    .floating-insta {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+    }
+
+    .floating-whatsapp {
+        bottom: 16px;
+    }
+
+    .floating-insta {
+        bottom: 78px;
+    }
 }
 
 .hero-portrait {
