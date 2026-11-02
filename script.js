@@ -60,115 +60,242 @@ const services = [
   ["Custom Orders", "Share an idea and commission a one-of-a-kind artwork.", galleryData[2].images[3]]
 ];
 
-const canvas = document.getElementById("bg-canvas");
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.z = 8;
+/* =========================================
+   SUBTLE 3D ART TOOLS BACKGROUND
+   No geometric balls / no particle field.
+   Tools stay behind all website content.
+========================================= */
+const bgCanvas = document.getElementById("bg-canvas");
 
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
-renderer.setSize(window.innerWidth, window.innerHeight);
-
-scene.add(new THREE.AmbientLight(0xffffff, 0.4));
-const l1 = new THREE.PointLight(0xEC4899, 1.2); l1.position.set(6, 4, 4); scene.add(l1);
-const l2 = new THREE.PointLight(0x06B6D4, 1.0); l2.position.set(-6, -4, 4); scene.add(l2);
-
-const COUNT = 2200;
-const positions = new Float32Array(COUNT * 3);
-const colors = new Float32Array(COUNT * 3);
-const palette = [new THREE.Color(0x7C3AED), new THREE.Color(0x06B6D4), new THREE.Color(0xEC4899)];
-
-for (let i = 0; i < COUNT; i++) {
-  positions[i * 3] = (Math.random() - 0.5) * 24;
-  positions[i * 3 + 1] = (Math.random() - 0.5) * 24;
-  positions[i * 3 + 2] = (Math.random() - 0.5) * 18;
-  const c = palette[Math.floor(Math.random() * palette.length)];
-  colors[i * 3] = c.r; colors[i * 3 + 1] = c.g; colors[i * 3 + 2] = c.b;
-}
-
-const pGeom = new THREE.BufferGeometry();
-pGeom.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-pGeom.setAttribute("color", new THREE.BufferAttribute(colors, 3));
-
-const particles = new THREE.Points(
-  pGeom,
-  new THREE.PointsMaterial({
-    size: 0.035, vertexColors: true, transparent: true, opacity: 0.85,
-    depthWrite: false, blending: THREE.AdditiveBlending
-  })
-);
-scene.add(particles);
-
-const shapes = [];
-function addShape(color, position, scale, speed) {
-  const mesh = new THREE.Mesh(
-    new THREE.IcosahedronGeometry(1, 1),
-    new THREE.MeshStandardMaterial({
-      color, emissive: color, emissiveIntensity: 0.5,
-      roughness: 0.25, metalness: 0.7, wireframe: true
-    })
+if (bgCanvas) {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    48,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    100
   );
-  mesh.position.set(...position);
-  mesh.scale.setScalar(scale);
-  mesh.userData = { base: [...position], speed };
-  scene.add(mesh);
-  shapes.push(mesh);
-}
-addShape(0x7C3AED, [-4, 2, -2], 1.2, 0.6);
-addShape(0x06B6D4, [5, -1, -3], 0.9, 0.8);
-addShape(0xEC4899, [2, 3, -4], 0.7, 1.1);
-addShape(0x7C3AED, [-3, -3, -1], 0.6, 0.9);
+  camera.position.z = 12;
 
-const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
-let scrollPct = 0;
-
-window.addEventListener("mousemove", (e) => {
-  mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
-  mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1;
-});
-
-window.addEventListener("scroll", () => {
-  const max = document.body.scrollHeight - window.innerHeight;
-  scrollPct = max > 0 ? window.scrollY / max : 0;
-}, { passive: true });
-
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+  const renderer = new THREE.WebGLRenderer({
+    canvas: bgCanvas,
+    antialias: true,
+    alpha: true
+  });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.setSize(window.innerWidth, window.innerHeight);
-});
+  renderer.setClearColor(0x000000, 0);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-const clock = new THREE.Clock();
-function animate() {
-  const dt = clock.getDelta();
-  const t = clock.elapsedTime;
+  scene.add(new THREE.AmbientLight(0xffffff, 1.45));
 
-  mouse.x += (mouse.tx - mouse.x) * 0.05;
-  mouse.y += (mouse.ty - mouse.y) * 0.05;
+  const warmLight = new THREE.DirectionalLight(0xe9c7a5, 1.8);
+  warmLight.position.set(5, 7, 8);
+  scene.add(warmLight);
 
-  particles.rotation.y += dt * 0.04 + scrollPct * dt * 0.6;
-  particles.rotation.x = scrollPct * Math.PI * 0.4 + mouse.y * 0.1;
-  particles.rotation.z += (mouse.x * 0.1 - particles.rotation.z) * 0.02;
-  particles.position.y = -scrollPct * 4;
+  const greenLight = new THREE.PointLight(0x3f6656, 1.2, 30);
+  greenLight.position.set(-7, -3, 7);
+  scene.add(greenLight);
 
-  shapes.forEach((m) => {
-    const s = m.userData.speed;
-    const [bx, by, bz] = m.userData.base;
-    m.rotation.x += dt * 0.3 * s;
-    m.rotation.y += dt * 0.25 * s;
-    m.position.x = bx + Math.sin(t * 0.4 * s) * 0.6 + mouse.x * 0.4;
-    m.position.y = by + Math.cos(t * 0.5 * s) * 0.4 - scrollPct * 1.2 + mouse.y * 0.3;
-    m.position.z = bz + Math.sin(t * 0.3 * s) * 0.5;
+  const tools = [];
+
+  const makeMaterial = (color, roughness = 0.48, metalness = 0.12, opacity = 0.26) =>
+    new THREE.MeshStandardMaterial({
+      color,
+      roughness,
+      metalness,
+      transparent: true,
+      opacity,
+      depthWrite: false
+    });
+
+  const woodMat = makeMaterial(0x9b704d, 0.7, 0.02, 0.27);
+  const darkGreenMat = makeMaterial(0x315747, 0.42, 0.12, 0.28);
+  const creamMat = makeMaterial(0xe9dfc9, 0.5, 0.05, 0.34);
+  const brassMat = makeMaterial(0xb98a58, 0.28, 0.68, 0.34);
+  const bristleMat = makeMaterial(0x66513d, 0.8, 0.0, 0.3);
+  const terracottaMat = makeMaterial(0xb86f4e, 0.5, 0.08, 0.25);
+
+  function addBrush(x, y, z, scale, rotation, speed) {
+    const group = new THREE.Group();
+
+    // Long wooden handle
+    const handle = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.075, 0.105, 1.65, 16),
+      woodMat
+    );
+    handle.position.y = -0.15;
+    group.add(handle);
+
+    // Metallic ferrule and two fine rings
+    const ferrule = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.115, 0.095, 0.34, 16),
+      brassMat
+    );
+    ferrule.position.y = 0.82;
+    group.add(ferrule);
+
+    [-0.11, 0.09].forEach((offset) => {
+      const ring = new THREE.Mesh(
+        new THREE.TorusGeometry(0.105, 0.012, 6, 18),
+        creamMat
+      );
+      ring.rotation.x = Math.PI / 2;
+      ring.position.y = 0.82 + offset;
+      group.add(ring);
+    });
+
+    // Soft tapered bristles
+    const bristles = new THREE.Mesh(
+      new THREE.ConeGeometry(0.095, 0.48, 18),
+      bristleMat
+    );
+    bristles.position.y = 1.22;
+    group.add(bristles);
+
+    const tip = new THREE.Mesh(
+      new THREE.ConeGeometry(0.025, 0.18, 12),
+      darkGreenMat
+    );
+    tip.position.y = 1.53;
+    group.add(tip);
+
+    group.position.set(x, y, z);
+    group.scale.setScalar(scale);
+    group.rotation.z = rotation;
+    group.rotation.x = -0.12;
+    group.userData = { baseX: x, baseY: y, speed, phase: Math.random() * 6 };
+    scene.add(group);
+    tools.push(group);
+  }
+
+  function addPencil(x, y, z, scale, rotation, speed, colorMat = terracottaMat) {
+    const group = new THREE.Group();
+
+    const body = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.065, 0.065, 1.8, 12),
+      colorMat
+    );
+    group.add(body);
+
+    const woodTip = new THREE.Mesh(
+      new THREE.ConeGeometry(0.064, 0.22, 12),
+      woodMat
+    );
+    woodTip.position.y = -1.0;
+    group.add(woodTip);
+
+    const graphite = new THREE.Mesh(
+      new THREE.ConeGeometry(0.018, 0.08, 8),
+      darkGreenMat
+    );
+    graphite.position.y = -1.14;
+    group.add(graphite);
+
+    const endCap = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.066, 0.066, 0.12, 12),
+      brassMat
+    );
+    endCap.position.y = 0.96;
+    group.add(endCap);
+
+    group.position.set(x, y, z);
+    group.scale.setScalar(scale);
+    group.rotation.z = rotation;
+    group.userData = { baseX: x, baseY: y, speed, phase: Math.random() * 6 };
+    scene.add(group);
+    tools.push(group);
+  }
+
+  function addMarker(x, y, z, scale, rotation, speed) {
+    const group = new THREE.Group();
+
+    const barrel = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.105, 0.105, 1.35, 16),
+      darkGreenMat
+    );
+    group.add(barrel);
+
+    const cap = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.11, 0.11, 0.25, 16),
+      terracottaMat
+    );
+    cap.position.y = 0.78;
+    group.add(cap);
+
+    const nib = new THREE.Mesh(
+      new THREE.ConeGeometry(0.075, 0.2, 16),
+      creamMat
+    );
+    nib.position.y = -0.76;
+    nib.rotation.z = Math.PI;
+    group.add(nib);
+
+    group.position.set(x, y, z);
+    group.scale.setScalar(scale);
+    group.rotation.z = rotation;
+    group.userData = { baseX: x, baseY: y, speed, phase: Math.random() * 6 };
+    scene.add(group);
+    tools.push(group);
+  }
+
+  // Spread around the viewport edges so headings and artwork remain clear.
+  addBrush(-6.2, 2.2, -2.2, 1.15, -0.55, 0.42);
+  addBrush(6.0, -2.1, -3.0, 0.92, 0.58, 0.34);
+  addPencil(5.4, 3.0, -4.0, 0.95, -0.72, 0.3);
+  addPencil(-5.7, -3.0, -3.5, 0.78, 0.62, 0.38, creamMat);
+  addMarker(1.0, 4.0, -5.0, 0.8, 0.32, 0.28);
+
+  const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+  let animationFrame = 0;
+
+  window.addEventListener("pointermove", (event) => {
+    pointer.targetX = (event.clientX / window.innerWidth) * 2 - 1;
+    pointer.targetY = -(event.clientY / window.innerHeight) * 2 + 1;
+  }, { passive: true });
+
+  window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   });
 
-  camera.position.x += (mouse.x * 0.5 - camera.position.x) * 0.03;
-  camera.position.y += (mouse.y * 0.3 - camera.position.y) * 0.03;
-  camera.lookAt(0, 0, 0);
+  const clock = new THREE.Clock();
 
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
+  function animateArtTools() {
+    animationFrame = requestAnimationFrame(animateArtTools);
+    const time = clock.getElapsedTime();
+
+    pointer.x += (pointer.targetX - pointer.x) * 0.025;
+    pointer.y += (pointer.targetY - pointer.y) * 0.025;
+
+    tools.forEach((tool) => {
+      const { baseX, baseY, speed, phase } = tool.userData;
+      tool.position.x = baseX + Math.sin(time * speed + phase) * 0.16 + pointer.x * 0.08;
+      tool.position.y = baseY + Math.cos(time * speed * 0.8 + phase) * 0.2 + pointer.y * 0.06;
+      tool.rotation.y = Math.sin(time * speed * 0.6 + phase) * 0.12;
+      tool.rotation.x = -0.12 + Math.cos(time * speed * 0.5 + phase) * 0.06;
+    });
+
+    renderer.render(scene, camera);
+  }
+
+  // Respect reduced-motion preferences and keep the scene lightweight.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    renderer.render(scene, camera);
+  } else {
+    animateArtTools();
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animationFrame);
+    } else if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      animateArtTools();
+    }
+  });
 }
-animate();
 
 const tabs = document.getElementById("category-tabs");
 const gallery = document.getElementById("gallery-grid");
