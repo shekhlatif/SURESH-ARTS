@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
 
 /* =========================================
@@ -194,7 +195,7 @@ footer {
 
 .logo {
   font-family: var(--heading);
-  font-size: 23px;
+  font-size: 1000px;
   font-weight: 800;
   letter-spacing: -1px;
 }
@@ -1799,8 +1800,17 @@ footer .muted {
 .reveal { transition-duration: .42s !important; }
 .art-card { animation-duration: .35s !important; }
 
+
+/* SURESH ART wordmark — Amatic SC in hero and footer */
+.logo,
+.logo span {
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+}
 </style>
 </head>
+
+<body>
 
 <a href="mailto:suresharts0121@gmail.com"
    class="floating-email"
@@ -1819,13 +1829,11 @@ footer .muted {
    </svg>
 </a>
 
-<body>
 
 <canvas id="bg-canvas"></canvas>
 
 <header class="nav">
-  <a href="#home" class="logo-mark"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT7CrjjyuCuyOpDTd8b44iPLOatc-5ziwqhuui-1gxwyaf60nhUQzjcmqlvHqAU_ZIQhxFjr0vDe1B2R0RQoVScy6nlvEN5xHqZZJE8l0gRGEkx2IA3F9HjDsX9Sif9a7WI8HTy7SZReSOPXr9nNNIWmHnVqLQHzyxt22TvHD9QqH0skpYUozukp7aUPc/s320/SURESH%20ARTS%20LOGO.jpeg"></div>
-      </a>
+  <a href="#home" class="logo-mark"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT7CrjjyuCuyOpDTd8b44iPLOatc-5ziwqhuui-1gxwyaf60nhUQzjcmqlvHqAU_ZIQhxFjr0vDe1B2R0RQoVScy6nlvEN5xHqZZJE8l0gRGEkx2IA3F9HjDsX9Sif9a7WI8HTy7SZReSOPXr9nNNIWmHnVqLQHzyxt22TvHD9QqH0skpYUozukp7aUPc/s320/SURESH%20ARTS%20LOGO.jpeg" alt="Suresh Arts logo"></a>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -1992,7 +2000,8 @@ footer .muted {
   <div class="logo">SURESH<span>ART</span></div>
   <p>"Turning Imagination Into Masterpieces"</p>
   <p class="muted">© SURESH ART . Karnataka, India . +91 70199 20839</p>
-   <p>
+  
+  <p>
   Designed by
   <a href="https://wa.me/917676735869?text=Hi%20SAagency%2C%20I%20want%20to%20know%20more%20about%20your%20services."
      target="_blank"
@@ -2006,7 +2015,7 @@ footer .muted {
   
 
 <!-- Floating social contact buttons -->
-<a class="floating-social floating-instagram" href="https://www.instagram.com/thesuresharts/" target="_blank" rel="noopener noreferrer" aria-label="Visit Suresh Art's on Instagram" title="Instagram">
+<a class="floating-social floating-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Suresh Art's on Instagram" title="Instagram">
   <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/></svg>
 </a>
 <a class="floating-social floating-whatsapp" href="https://wa.me/917019920839" target="_blank" rel="noopener noreferrer" aria-label="Chat with Suresh Art's on WhatsApp" title="WhatsApp">
@@ -2079,7 +2088,6 @@ const galleryData = [
   {
     category: 'Acrylic Paintings',
     images: [
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgj_c_dtFxb1A2yaA382iSfqVHH0N79X89haYQyjuGWA63Hb0Yj3CQknIZKJGI3R8i03tFjyXaA2GIlzptyzRuLu0KvW-Z4qqPcoU1XOMB3bWVl11sfI6n_JaBPpu_-cmp9RowZ4cYdHhspkOg4i7n6HDBOINnfmpdHyjSObqaEU83Owxy77Y6Pvyk12-g/s1600/3.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHjUHwjWs8fzRzylyip-vbZuQgGYV3xPJuHyQ8NURCI16C0afmGJggA2inwk8mGJphT-ZlrHK64W9vXa2JU1pz9kmiwN703P7RnmPfnRlHke7nLE9xy7aqqZn2iiF9nRPGlIJ7h3tXUWihuuGQzLWwk0DvKUzglZT_eihFZ5MexlTLrd8yEWg2CSJN858/s1600/2.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVk6nVYKWHBcRyp0X-dNew-jko8aQQ9g9VnwRaCgqDYtoGxq5tUeQEq0U1N4i4hYDL9ifOrDOQCqCfd0Djhq4-ZGh_9WEA2esUoIWCJEM4r_q8QqsHiMryh14lvo0kG25W96Ex3sm5YYRHDYRn92EM2wO1dTmWf61k764_sCbFGq1MEDroiKct0jNx3v0/s1600/1.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheNWQJ-ltvBrsS2Iy5TrNtBB4nWcGuGhPjDUDBMahp4IshFSFRwrrAkNnlQl0rHbIDw395lMow19GUPfqgOBL_saHTJdau_yIfp5_4TU0DSpRsLgTaA-VQAPhl6_nmDYGLYlQkTHsyK3M-NOAMnePQBCtIL5d8vfQtFAWccT-NQf1K-n1TTHSUqVLFf94/s1600/WhatsApp%20Image%202026-11-02%20at%209.20.38%20PM.jpeg',
@@ -2095,10 +2103,8 @@ const galleryData = [
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzckD_gbP3QI1cmpEy6coygeVUY1GboAq1xKxV533oI2wHjnlN2FaY6FQUoOSEGScTFIz6z80n9qrZDSbyXMSq27JBkUQp9UyQoYJREK7iVpaQn_Qz8DskeVo-zHEwhGGWCBsDcCyX65GCHGO_tiBP3lGrkxTBMaXWikKpYP_40wXljthR1Anz5qEW_y0/s1600/2.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGwj_UFGwUxTgjPVyz-uJ5IPsXhCC5If2wEn2E_G3-GPLhJP_5j-Bhu14-Nggpg7jPbG65wW97RRX3QWhpWBC5QTIskTylj9P2rEg-t8KIKs8BqYZlOPeQGGmxF4w3YOCRjNrIpgtifmscwYst1ztFtDem0m7teDXb62fFBwFxydGPPewk6WLeZCvEBSQ/s1600/1.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgINsUYfGybgL90t0nrsmi5Y1FcT2o0hU45fIreJ9QvNKK6qKi50arNCClrahNKglHkr8n-IHzdm9g5oSGJdvujjQtRikOhfv3VSecNreSlWVxQLCLu_6rc2VYorfIDx-FiVreP1VH5QjOFok6gkh9ZvfnAzu9b0h1n0fF434A3GWi8nYu3mnU1x3xJ9I/s1600/WhatsApp%20Image%202026-11-04%20at%204.48.20%20PM.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxSmGPXau_MA7aTRVt0VSOzzS-7OwuEW5e-2J6LpjSRNr1b-ex7Kz7kP9jULdo2Rw9GVWPZ0u2AERtzwcLoxLdQebHPiwQxrjfv0xUZR4EbyqJg6jCpqPAk_Cf8RRU5FHMMU_gL73E9Glq5weMc2TyXJrlhN8u8gEKVgCw1prhPhBrno-tzbjikWcCvLs/s1600/WhatsApp%20Image%202026-11-04%20at%204.48.19%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha1ClyHPbmREQaNiFVc39TwPyOhSIFmNQcWvZoL8tdExPuO2dRmBXK5WEBk979-b430fUMRs6xW2CufiMbBDfLvGZnejxtNLQJV6ZVyL8A01T8l0VTasaJuzkzohVc4RWvHxMP3zOdq4ZZZWnt_65BWXDbwXGsCSY5sp_g1wrQ0oTRXk0ntBV0sLRlQ0A/s1600/4.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBSjQWNz6-kHka7XOJRh-W0HocQsJBNJlRZn71010T8CVInOSkdKmjC1fpz64s2lp-DdxjENFfbag50Vkgft34RbD-w3jdr2hQg-8j_6vW2wae7wS0QTgff7isun8DzOiTmaYmlORb3Xi1BTb7dFgmmomT1A_sOT-I670MM31G4EB6AOTQ887JQK18Kvc/s1600/3.jpeg'
-    ]
+       ]
   },
   {
     category: 'Pencil Arts',
