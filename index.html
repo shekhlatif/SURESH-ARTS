@@ -650,7 +650,7 @@ footer {
   overflow: hidden;
   background: var(--text);
   color: #fff;
-  padding: 18px 0;
+  padding: 10px 0;
   white-space: nowrap;
 }
 
@@ -1370,7 +1370,7 @@ footer .muted {
   }
 
   .logo {
-    font-size: 19px;
+    font-size: 25px;
   }
 
   .nav nav {
@@ -1399,7 +1399,7 @@ footer .muted {
   }
 
   .hero-copy > p {
-    font-size: 14px;
+    font-size: 25px;
   }
 
   .hero-portrait {
@@ -1477,7 +1477,7 @@ footer .muted {
 
   .tab {
     padding: 9px 12px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .service-grid {
@@ -2390,6 +2390,25 @@ iframe {
   }
 }
 
+
+/* Requested focused refinements — existing site layout and theme preserved */
+.hero-brand { font-size: clamp(34px, 4.2vw, 54px) !important; line-height: 1.15; margin-bottom: 12px; }
+.cta-row { align-items: stretch; }
+.cta-row .btn { flex: 1 1 190px; min-width: 190px; }
+.floating-social img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.floating-social { overflow: hidden; padding: 0; }
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 48px; height: 58px; border: 0; border-radius: 12px; color: #fff; background: rgba(20,30,25,.72); font-size: 42px; line-height: 1; display: grid; place-items: center; cursor: pointer; }
+.lightbox-prev { left: 22px; }
+.lightbox-next { right: 22px; }
+.lightbox-nav:hover { background: rgba(20,30,25,.92); }
+@media (max-width: 650px) {
+  .hero-brand { font-size: clamp(30px, 9vw, 42px) !important; }
+  .cta-row .btn { flex: 1 1 100%; min-width: 0; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-nav { width: 38px; height: 48px; font-size: 34px; }
+}
+
 </style>
 </head>
 
@@ -2466,7 +2485,7 @@ iframe {
   <div class="hero-shell">
     <div class="hero-copy reveal">
       
-  <div class="logo SPAN">SURESH<span>ART</span></div>
+  <div class="logo SPAN hero-brand">Suresh<span>Art</span></div>
       <div class="badge">CREATIVE STUDIO . KARNATAKA, INDIA</div>
       <h1>Turning Ideas Into<br/><span class="gradient">Extraordinary Art</span></h1>
       <p>Professional portraits, murals, wall art, canvas paintings and custom creative projects handcrafted by Suresh.</p>
@@ -2479,7 +2498,6 @@ iframe {
       <div class="cta-row">
         <a href="#portfolio" class="btn btn-light magnetic">Explore Portfolio</a>
         <a href="#contact" class="btn btn-ghost magnetic">Get a Free Quote</a>
-        <a href="https://wa.me/917019920839" class="btn btn-glow magnetic" target="_blank" rel="noreferrer">WhatsApp</a>
       </div>
       <div class="counter-row">
         <div><strong>500+</strong><span>Artworks</span></div>
@@ -2488,7 +2506,7 @@ iframe {
       </div>
     </div>
     <div class="hero-portrait reveal">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj77xt9JUwLIhnx10BZH2WpeZfiR4oDqK7pVNims3n5oYEmO5EDef2BdWv-w_ms0WglvR6i7zGgM4RStnhs4CnXWuh_lshKc88n9cPEgmizGquu4mmPwvVLJ8WU-C953WY-6USW-HXTHftYpziE9pzGiVOsKJwomUmkSyXSXrqJiWewdnalIk7EMTrLry4/s320/WhatsApp%20Image%202026-05-30%20at%202.24.08%20PM.jpeg" alt="Suresh Art's featured artwork placeholder" loading="eager" />
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVSRJDNDzr8iOevIQnGiLafekj_EO1S6x6DfAfXNDzfDgpm27O014fC3c_fWM-qUr1b1_xkFo7u0FG-_xP2zRPXPbcBvHGyhtX_DMXXtFj_wTjUjAlblTPoSv5VLXh-kFV5XKYad1vBNZTVxxcpaRApKZUP7v4-hv0eqftJSZCtFC25U61AkWx-vzpok8/s320/SURESH%20ARTS%20MAIN%20%20IMAGE%20.jpeg" alt="WhatsApp contact artwork" loading="eager" />
     </div>
   </div>
   <!--<div class="scroll-hint">SCROLL TO EXPLORE</div>-->
@@ -2510,7 +2528,7 @@ iframe {
 
 <section id="services" class="section">
   <span class="kicker">What I Make</span>
-  <h2>Services for every <span class="gradient">canvas</span>.</h2>
+  <h2>Services for every <span class="gradient"></span>.</h2>
   <div id="services-grid" class="service-grid"></div>
 </section>
 
@@ -2603,14 +2621,16 @@ iframe {
 
 <!-- Floating social contact buttons -->
 <a class="floating-social floating-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Suresh Art's on Instagram" title="Instagram">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/></svg>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZE2v5KspZ7SB_ccakbufAhaQ6AJRivyBDaMb2w-lqG3c4KtsLAhGjYX04a6Pko4sbBV-WOS-NXakH315Um668Pq2xPp_dhSM1LMOAFmxwL0CFdnwF7jv6UPVeVWmrysHlPMTPk058nNsxtluUFMl0-gf6EL4s0krX5cRJL3wkZRcovqd0_EzfHwn_jbk/s1600/Insat%20gram%20iage.jpeg" alt="Instagram" loading="lazy" />
 </a>
 <a class="floating-social floating-whatsapp" href="https://wa.me/917019920839" target="_blank" rel="noopener noreferrer" aria-label="Chat with Suresh Art's on WhatsApp" title="WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.09.55 4.13 1.59 5.93L.12 24l6.36-1.67a11.9 11.9 0 0 0 5.61 1.43h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.15-3.46-8.4ZM12.1 21.75h-.01a9.86 9.86 0 0 1-5.02-1.37l-.36-.21-3.77.99 1.01-3.67-.24-.38a9.82 9.82 0 0 1-1.51-5.24c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88Zm5.42-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwG0qtz9wtnvcOtHmJxyxFFKvFHvE9nxEmvBH938Wj9pCWURwTPPjOPTUDxVP68pyQsZ0NoAonqueBcKeqLfFxAl0evxeJaw3wG_jWHKwDHtEOaD2R9vIKu9iQ442hJAoXO65q39stjgO94k_A6yym_PQbuXzGoxmiC3qUw5bmgDLAsWBSuiYzB5mL21I/s1600/whatsapp%20icon.jpg" alt="WhatsApp" loading="lazy" />
 </a>
 
 <div id="lightbox" class="lightbox" aria-hidden="true">
   <button type="button" id="lightbox-close" aria-label="Close artwork preview">×</button>
+  <button type="button" id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+  <button type="button" id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
   <img id="lightbox-img" src="" alt="" />
   <span id="lightbox-caption"></span>
 </div>
@@ -2625,6 +2645,7 @@ const galleryData = [
   {
     category: 'Wall Paintings',
     images: [
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUiDelqg-X5gl1MKG3kYSOcdefxrKXg4dj-l6HADl4EwCT1q66-TR-8TOJWVRJEpGTJ9aC2bbIEplemPwQb6dSmWe1rvJ2LqoiPA3NQs5qj7dfyetAui9D7rOwcFNx02cCXyEtyfBYGQMlfX3w_9lMCrplvnrAASatIK21CZ6GVLBFRfgaygoMCIkZBG4/s1600/walll%20painting%20custom%20mural%20image.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxPVIsLXwFoaPx36_bkoaJ5253mW-Us3NusRaYurkn-1vwcqxJES3_WciARv1cFwBIlD2EJj33yHw8jvptjrXEmw4Oi7NT-6pR0gGg7kbVJZ2Hew2gyQov_pRMB253adrAnjhYoGJaOUHse0LjgyeqvNx0LiqxZiOZwXz8zJUZIaKK6SjLqBxaa1y2pMI/s1600/suresh%20arts%20wall%2046.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlhpxx2V33JG83WCapFrs3b-VvFBmcHmAl8SBeyON2uzXRZDB6V47TYP1sw1HXvuAVuzcL1RLNilBN5ATJf1nL07KXM6jHb_Ieo5stryEbdjRzQTwrsL8fm8mw6fUt4YA_Hh410nRv1YWPevw2eNs1oMOmw78JaQguCmuStuGh_jbuS5SI8YU4LjZQoAc/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.32%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheuFnrM2VN3kirkxz9cIAJT0O6wki1MC6WwyVLvzCmV_qs9lYAwnp40VG_WPLJs95Dg7706bdKzzmrMitXyzO5YJsR8sD8s2qeX1JDgMjEC4EK_dMUiGfXYVtMOM51opwc3d8PZ6qA4Q6SkTVa50x5ur9_tPEpZfQl3X_uZS7gFHbsb3uqac2j1SirihI/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.32%20PM%20%281%29.jpeg',
@@ -2688,6 +2709,10 @@ const galleryData = [
   {
     category: 'Landscape Paintings',
     images: [
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbHqJqNxrplXO3DeeCxchs5cMv-c7ruFe5EmILfUqxlVa2aQ2yN6rt3ulRmHub5nt3HNHLCk_-oV0BRn0PZumderEMKRSDcpsA2JI8uOyTqsvqYUZP-5zUJxtDTOJONMJNSErcmW3YTH4WZAsm0y_IRi9ZzmLHFYWLGj8MR4qLX_rdsR9sqkxLTmPofuk/s320/WhatsApp%20Image%202026-11-02%20at%209.14.51%20PM.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxzHuMf2CAbC5dBAq_uX90DT8Z-6reNArg87JXZNkjyu8SYz4iGBpjIEh_OzdL8BQIKDYBU-jo157cFI8nsPj4CAz9eo2pAcSJYRpkNZyWo9a3zn0EggrOCEE1TN4sDkRT2802ucZG0sBc6D2lkW8fI4A3D0czqXn3H_wTELT6OejztHbKAVieSsgxkkQ/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(1).jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD3JImpQJxZXcEI7Rg25ec5MLA6gsSahpCm269BdDVLVzsmKq5RQKMedAVy35py8v2J7er-JqV5vAO1AtL-06VE93UXqtv6j2fWc0Dl6oJEqeTJyhNrQPfDhkSZRf9dK_18SptUq-oO28SbJfbCbThBRmf5HoJ8SGx1q8g8HefUOraSjS4upeOIsuLD00/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(2).jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhI-suML4qqlw4ajJqkdxspcLeQx3HLH3IXA2c63JNZixP9kCgbQckr47cIj2szJiaNfBChVrhislKM5pNB256WP1DXIb-lvOq-qXCp6j2wj5f9ro_eX4KvCjXvtmhBFFPN4gIEoZluG5B8h1j_hEKYNY1_t6Krt1tL-1VBIOac4x11Iy1axMlqKKCoZV0/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzckD_gbP3QI1cmpEy6coygeVUY1GboAq1xKxV533oI2wHjnlN2FaY6FQUoOSEGScTFIz6z80n9qrZDSbyXMSq27JBkUQp9UyQoYJREK7iVpaQn_Qz8DskeVo-zHEwhGGWCBsDcCyX65GCHGO_tiBP3lGrkxTBMaXWikKpYP_40wXljthR1Anz5qEW_y0/s1600/2.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGwj_UFGwUxTgjPVyz-uJ5IPsXhCC5If2wEn2E_G3-GPLhJP_5j-Bhu14-Nggpg7jPbG65wW97RRX3QWhpWBC5QTIskTylj9P2rEg-t8KIKs8BqYZlOPeQGGmxF4w3YOCRjNrIpgtifmscwYst1ztFtDem0m7teDXb62fFBwFxydGPPewk6WLeZCvEBSQ/s1600/1.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgINsUYfGybgL90t0nrsmi5Y1FcT2o0hU45fIreJ9QvNKK6qKi50arNCClrahNKglHkr8n-IHzdm9g5oSGJdvujjQtRikOhfv3VSecNreSlWVxQLCLu_6rc2VYorfIDx-FiVreP1VH5QjOFok6gkh9ZvfnAzu9b0h1n0fF434A3GWi8nYu3mnU1x3xJ9I/s1600/WhatsApp%20Image%202026-11-04%20at%204.48.20%20PM.jpeg',
@@ -2697,6 +2722,7 @@ const galleryData = [
   {
     category: 'Pencil Arts',
     images: [
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVzMXGp_w-vfqDItF1Y7_jO_APkz5vFLbtk0IZM2HZcv0VZrnurNcOBbZlWfh_SzDG2Oa0Fixtx-6aUdh0gq_u8O2VbLSUpqIAHzee-xe1OsiUhC-rCF277TYwEJvcVK1hN2-jIh0tQAq0jxftddHecJv5Gxj38Xvvp1253QwUGg_TYc5OR6PlMP3CSWU/s1600/WhatsApp%20Image%202026-11-07%20at%208.35.13%20AM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1vNRpo2LbYRyYwLK0o3Tv4CC8g5w_55a9-ItW5MjKAzHKQw_i43t9PReuG5_vmyMacvvzj_4gKFW_DYr1lu7WWZkr3KgYD7iDtctFvqFw3rbXovmtPDwGTM2tC9ievhDRgTzot-4ZkgrJZnZNbsPPNKTadrstNffjFMrSUG0toh1jzSVj754f-NJ35KM/s320/WhatsApp%20Image%202026-05-30%20at%202.24.08%20PM%20(1).jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoDQVzZNUFd9hruR7T3P_es7uCUU4HGng5YWGyEo2tWhuA-dJcqgSBoUskGQUPzGWTyzF53vT8E4ZZbgEWGX2weYgs5lMskThk52eLlIIpwI-tdxmmy8aLbg8nRuuzYqSsnpFNCaltDs93nk0dShynPeBaK7qTaJclH4SfthMUnPuYOj3xoXqaj_xdidE/s320/WhatsApp%20Image%202026-05-30%20at%202.24.08%20PM%20(2).jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9EChyphenhyphenUo4DzOH8-U2mGHzaExQqUaAwt0F7qdX7ornxvvkSgLqZKzVBWbXG7xdnfQ8DSgWLrTvNLAm-JLRW2yl2op_MHTdRlUTnWTzCzLt6qJy-uRrtyrb-9X5AFgUCkl-nH_4NR6-XnqYm1o16910cq1Llkj13AoqPP9TqommkNJjX-fyGr7dgLoqnDP4/s320/WhatsApp%20Image%202026-05-30%20at%202.24.08%20PM%20(3).jpeg',
@@ -2722,7 +2748,7 @@ const services = [
   ["Landscape Painting", "Scenic hand-painted landscapes with rich color depth.", categoryImages["Landscape Paintings"][0]],
   ["Pencil Portraits", "Detailed graphite portraits from your favorite photo.", categoryImages["Pencil Arts"][0]],
   ["Wall Painting", "Custom wall art for homes, cafes, schools and offices.", categoryImages["Wall Paintings"][41]],
-  ["Custom Murals", "Large-scale mural concepts designed around your space.", categoryImages["Wall Paintings"][45]],
+  ["Custom Murals", "Large-scale mural concepts designed around your space.", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUiDelqg-X5gl1MKG3kYSOcdefxrKXg4dj-l6HADl4EwCT1q66-TR-8TOJWVRJEpGTJ9aC2bbIEplemPwQb6dSmWe1rvJ2LqoiPA3NQs5qj7dfyetAui9D7rOwcFNx02cCXyEtyfBYGQMlfX3w_9lMCrplvnrAASatIK21CZ6GVLBFRfgaygoMCIkZBG4/s1600/walll%20painting%20custom%20mural%20image.jpeg"],
   ["Canvas Art", "Ready-to-display canvas paintings with premium finish.", categoryImages["Acrylic Paintings"][5]],
 ];
 
@@ -2975,11 +3001,24 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const lightboxCaption = document.getElementById("lightbox-caption");
 const lightboxClose = document.getElementById("lightbox-close");
+const lightboxPrev = document.getElementById("lightbox-prev");
+const lightboxNext = document.getElementById("lightbox-next");
+let lightboxItems = [];
+let lightboxIndex = 0;
 
-function openLightbox(artwork) {
+function showLightboxItem(index) {
+  if (!lightboxItems.length) return;
+  lightboxIndex = (index + lightboxItems.length) % lightboxItems.length;
+  const artwork = lightboxItems[lightboxIndex];
   lightboxImg.src = artwork.src;
   lightboxImg.alt = artwork.title;
   lightboxCaption.textContent = `${artwork.title} . ${artwork.category}`;
+}
+
+function openLightbox(artwork, items = [artwork]) {
+  lightboxItems = items;
+  lightboxIndex = Math.max(0, items.indexOf(artwork));
+  showLightboxItem(lightboxIndex);
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden", "false");
 }
@@ -3008,7 +3047,7 @@ function renderGallery(category = galleryData[0].category) {
     </article>
   `).join("");
   gallery.querySelectorAll(".art-card").forEach((card, index) => {
-    card.addEventListener("click", () => openLightbox(artworks[index]));
+    card.addEventListener("click", () => openLightbox(artworks[index], artworks));
   });
   observeReveals();
 }
@@ -3025,7 +3064,7 @@ function renderFeatured() {
     </article>
   `).join("");
   featuredGrid.querySelectorAll(".featured-card").forEach((card, index) => {
-    card.addEventListener("click", () => openLightbox(allArtworks[index]));
+    card.addEventListener("click", () => openLightbox(allArtworks[index], allArtworks));
   });
 }
 
@@ -3076,11 +3115,15 @@ tabs.addEventListener("click", (e) => {
 });
 
 lightboxClose.addEventListener("click", closeLightbox);
+lightboxPrev?.addEventListener("click", (e) => { e.stopPropagation(); showLightboxItem(lightboxIndex - 1); });
+lightboxNext?.addEventListener("click", (e) => { e.stopPropagation(); showLightboxItem(lightboxIndex + 1); });
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeLightbox();
+  if (lightbox.classList.contains("open") && e.key === "ArrowLeft") showLightboxItem(lightboxIndex - 1);
+  if (lightbox.classList.contains("open") && e.key === "ArrowRight") showLightboxItem(lightboxIndex + 1);
 });
 
 document.querySelectorAll(".magnetic").forEach((button) => {
@@ -3151,5 +3194,4 @@ if (navToggle && siteNav) {
 </script>
 </body>
 </html>
-
-
+ 
