@@ -1784,3 +1784,113 @@ footer .muted {
   letter-spacing: 1px !important;
   white-space: nowrap;
 }
+
+
+/* Final category ticker: uppercase text, no surrounding pill borders */
+.marquee-track span {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 5px !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.15px !important;
+}
+.marquee-track {
+  gap: 18px !important;
+}
+
+
+/* ===== Requested refinements: compact service ticker, green wordmark, social menu ===== */
+.marquee {
+  padding: 8px 0 !important;
+  min-height: 0 !important;
+}
+.marquee-track span {
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 1.3px !important;
+  padding: 0 7px !important;
+}
+.hero-brand .brand-art {
+  color: #3f8b58 !important;
+  display: inline-block;
+}
+
+/* Desktop: three compact contact buttons stacked in the same floating position */
+.floating-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10000;
+}
+.floating-contact-toggle { display: none; }
+.floating-contact-links {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 12px;
+}
+.floating-contact-links .floating-social {
+  position: static !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.22);
+  transition: transform .25s ease;
+}
+.floating-contact-links .floating-social:hover { transform: scale(1.1); }
+.floating-contact-links .floating-social img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.floating-contact-links .floating-email { background: #3f6656; color: #fff; }
+.floating-contact-links .floating-email svg { width: 25px; height: 25px; }
+
+@media (max-width: 700px) {
+  .floating-contact { right: 16px; bottom: 16px; }
+  .floating-contact-toggle {
+    width: 54px;
+    height: 54px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: #294b3d;
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    font-size: 32px;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+  }
+  .contact-toggle-plus { transition: transform .25s ease; }
+  .floating-contact-links {
+    position: absolute;
+    right: 2px;
+    bottom: 66px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px) scale(.92);
+    transform-origin: bottom right;
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  }
+  .floating-contact.is-open .floating-contact-links {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+  .floating-contact.is-open .contact-toggle-plus { transform: rotate(45deg); }
+  .floating-contact-links .floating-social { width: 48px !important; height: 48px !important; }
+  .marquee { padding: 6px 0 !important; }
+  .marquee-track span { font-size: 9px !important; letter-spacing: 1px !important; }
+}
