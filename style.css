@@ -2317,3 +2317,58 @@ canvas {
         gap: 8px;
     }
 }
+
+
+/* WhatsApp button in navigation header */
+
+.nav-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 50px;
+    background: #416d5c;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(30, 65, 50, 0.12);
+    transition: all 0.25s ease;
+}
+
+.nav-whatsapp:hover {
+    background: #244d3c;
+    transform: translateY(-2px);
+}
+
+/* Hide WhatsApp from floating contact menu */
+.floating-contact .whatsapp,
+.floating-contact a[href*="wa.me"] {
+    display: none !important;
+}
+
+/* Mobile header */
+@media (max-width: 700px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 8px 14px !important;
+    }
+
+    .nav-whatsapp {
+        display: inline-flex !important;
+        padding: 11px 15px;
+        font-size: 12px;
+        margin-left: auto;
+    }
+
+    .nav-toggle {
+        flex-shrink: 0;
+    }
+}
+
+
