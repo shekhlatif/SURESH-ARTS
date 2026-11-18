@@ -2409,6 +2409,34 @@ iframe {
   .lightbox-nav { width: 38px; height: 48px; font-size: 34px; }
 }
 
+
+
+/* Unified SureshArt wordmark — handcrafted lettering matching the art-studio identity */
+.logo, .logo span, .footer-logo, .footer-logo span {
+  font-family: 'Architects Daughter', cursive !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+}
+
+
+/* Compact outlined category labels in the scrolling art-services strip */
+.marquee-track {
+  align-items: center;
+  gap: 9px !important;
+}
+.marquee-track span {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 4px 11px !important;
+  margin: 0 !important;
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 999px;
+  font-size: 10px !important;
+  line-height: 1.35;
+  letter-spacing: 1px !important;
+  white-space: nowrap;
+}
+
 </style>
 </head>
 
@@ -2451,8 +2479,20 @@ iframe {
 </header>
 <section class="marquee">
   <div class="marquee-track">
-    <span>Name Boards . Custom Commissions . Portraits . Pencil Sketches . Canvas . Acrylic . Wall Art . Murals . Name Boards . Custom Commissions .</span>
-    <span>Name Boards . Custom Commissions . Portraits . Pencil Sketches . Canvas . Acrylic . Wall Art . Murals . Name Boards . Custom Commissions .</span>
+    <span>Sketches</span>
+    <span>Canvas</span>
+    <span>Acrylic</span>
+    <span>Wall Art</span>
+    <span>Murals</span>
+    <span>Name Boards</span>
+    <span>Custom Commissions</span>
+    <span>Sketches</span>
+    <span>Canvas</span>
+    <span>Acrylic</span>
+    <span>Wall Art</span>
+    <span>Murals</span>
+    <span>Name Boards</span>
+    <span>Custom Commissions</span>
   </div>
 </section>
 <!--
@@ -2645,7 +2685,6 @@ const galleryData = [
   {
     category: 'Wall Paintings',
     images: [
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUiDelqg-X5gl1MKG3kYSOcdefxrKXg4dj-l6HADl4EwCT1q66-TR-8TOJWVRJEpGTJ9aC2bbIEplemPwQb6dSmWe1rvJ2LqoiPA3NQs5qj7dfyetAui9D7rOwcFNx02cCXyEtyfBYGQMlfX3w_9lMCrplvnrAASatIK21CZ6GVLBFRfgaygoMCIkZBG4/s1600/walll%20painting%20custom%20mural%20image.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxPVIsLXwFoaPx36_bkoaJ5253mW-Us3NusRaYurkn-1vwcqxJES3_WciARv1cFwBIlD2EJj33yHw8jvptjrXEmw4Oi7NT-6pR0gGg7kbVJZ2Hew2gyQov_pRMB253adrAnjhYoGJaOUHse0LjgyeqvNx0LiqxZiOZwXz8zJUZIaKK6SjLqBxaa1y2pMI/s1600/suresh%20arts%20wall%2046.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlhpxx2V33JG83WCapFrs3b-VvFBmcHmAl8SBeyON2uzXRZDB6V47TYP1sw1HXvuAVuzcL1RLNilBN5ATJf1nL07KXM6jHb_Ieo5stryEbdjRzQTwrsL8fm8mw6fUt4YA_Hh410nRv1YWPevw2eNs1oMOmw78JaQguCmuStuGh_jbuS5SI8YU4LjZQoAc/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.32%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheuFnrM2VN3kirkxz9cIAJT0O6wki1MC6WwyVLvzCmV_qs9lYAwnp40VG_WPLJs95Dg7706bdKzzmrMitXyzO5YJsR8sD8s2qeX1JDgMjEC4EK_dMUiGfXYVtMOM51opwc3d8PZ6qA4Q6SkTVa50x5ur9_tPEpZfQl3X_uZS7gFHbsb3uqac2j1SirihI/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.32%20PM%20%281%29.jpeg',
@@ -2691,7 +2730,11 @@ const galleryData = [
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0elZbqNgIA0o2R-s2HVoDvUG8C3Uw-4RypcDHxBuAY9klHJqt0sz1pLH-tYB2h8ZPt5jw_INC3zQzsUHl5vRdQhrNyjT651AUsk-ODfjNx6bV97i5pTxCPHpI_JxV0yx6Zs9AZVOB7OVyvIfCR8L4XnGSWbwXDSxTSXxBCG7-zgwtSlCUTDUjdHvnqdw/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.36%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW0Uaw8a3_tUuTFcnhPKHzYvhPOkswzXzw9FGlMp1Jx35pHq-8wNQhrsPpdEQ2_vOJ9BU4TIcMq_HoeSInDCYvLRQjg1sjjLGnTTbVsZ45Lif8LIPXqOMuVsrjibbtIIkA37hxbwl79uIIEyG5k0W_XxdRJ2qGmJpHprFpavsf1iwHMmmycRc4K_R5h4k/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.35%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVEWHzYxnVv_8kQIN3h1Twrc_XwBbvWky46yhRfhfPlg3w6RNT8Ji-wKCcDGScP19TjWeenuZ0GAX6MM2CxIZV0JgywsBvuNBhwuVPalS6FlPXfMjkUo_1cBzGvyfwruzEM9WvijpxTww-7m1yvPP41y-KfCiPk_ZPRm3CYYXVtX-IoUXgTn-SmDhjSXA/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.34%20PM.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjI2TVamqgIUvlx92ZYZ3_JtRsimNJN3e3fWJbhb6J7dL0scHQJzNQhyphenhyphenOLS7dtA9764Nw1EGWuNsPJEJUZpUGV_UIlh1b8hI6M7lanvv8U3qnZ-OF0jpqfW7Ub5z85vX8UiERuR98tvHHL5FtQ7ulTcuqMgHYFbEgLrvifTiYyU-3gL4KDSN8WFshjbxww/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.33%20PM.jpeg'
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjI2TVamqgIUvlx92ZYZ3_JtRsimNJN3e3fWJbhb6J7dL0scHQJzNQhyphenhyphenOLS7dtA9764Nw1EGWuNsPJEJUZpUGV_UIlh1b8hI6M7lanvv8U3qnZ-OF0jpqfW7Ub5z85vX8UiERuR98tvHHL5FtQ7ulTcuqMgHYFbEgLrvifTiYyU-3gL4KDSN8WFshjbxww/s1600/WhatsApp%20Image%202026-11-02%20at%203.44.33%20PM.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbHqJqNxrplXO3DeeCxchs5cMv-c7ruFe5EmILfUqxlVa2aQ2yN6rt3ulRmHub5nt3HNHLCk_-oV0BRn0PZumderEMKRSDcpsA2JI8uOyTqsvqYUZP-5zUJxtDTOJONMJNSErcmW3YTH4WZAsm0y_IRi9ZzmLHFYWLGj8MR4qLX_rdsR9sqkxLTmPofuk/s320/WhatsApp%20Image%202026-11-02%20at%209.14.51%20PM.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxzHuMf2CAbC5dBAq_uX90DT8Z-6reNArg87JXZNkjyu8SYz4iGBpjIEh_OzdL8BQIKDYBU-jo157cFI8nsPj4CAz9eo2pAcSJYRpkNZyWo9a3zn0EggrOCEE1TN4sDkRT2802ucZG0sBc6D2lkW8fI4A3D0czqXn3H_wTELT6OejztHbKAVieSsgxkkQ/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(1).jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD3JImpQJxZXcEI7Rg25ec5MLA6gsSahpCm269BdDVLVzsmKq5RQKMedAVy35py8v2J7er-JqV5vAO1AtL-06VE93UXqtv6j2fWc0Dl6oJEqeTJyhNrQPfDhkSZRf9dK_18SptUq-oO28SbJfbCbThBRmf5HoJ8SGx1q8g8HefUOraSjS4upeOIsuLD00/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(2).jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhI-suML4qqlw4ajJqkdxspcLeQx3HLH3IXA2c63JNZixP9kCgbQckr47cIj2szJiaNfBChVrhislKM5pNB256WP1DXIb-lvOq-qXCp6j2wj5f9ro_eX4KvCjXvtmhBFFPN4gIEoZluG5B8h1j_hEKYNY1_t6Krt1tL-1VBIOac4x11Iy1axMlqKKCoZV0/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM.jpeg'
     ]
   },
   {
@@ -2709,15 +2752,10 @@ const galleryData = [
   {
     category: 'Landscape Paintings',
     images: [
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbHqJqNxrplXO3DeeCxchs5cMv-c7ruFe5EmILfUqxlVa2aQ2yN6rt3ulRmHub5nt3HNHLCk_-oV0BRn0PZumderEMKRSDcpsA2JI8uOyTqsvqYUZP-5zUJxtDTOJONMJNSErcmW3YTH4WZAsm0y_IRi9ZzmLHFYWLGj8MR4qLX_rdsR9sqkxLTmPofuk/s320/WhatsApp%20Image%202026-11-02%20at%209.14.51%20PM.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxzHuMf2CAbC5dBAq_uX90DT8Z-6reNArg87JXZNkjyu8SYz4iGBpjIEh_OzdL8BQIKDYBU-jo157cFI8nsPj4CAz9eo2pAcSJYRpkNZyWo9a3zn0EggrOCEE1TN4sDkRT2802ucZG0sBc6D2lkW8fI4A3D0czqXn3H_wTELT6OejztHbKAVieSsgxkkQ/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(1).jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD3JImpQJxZXcEI7Rg25ec5MLA6gsSahpCm269BdDVLVzsmKq5RQKMedAVy35py8v2J7er-JqV5vAO1AtL-06VE93UXqtv6j2fWc0Dl6oJEqeTJyhNrQPfDhkSZRf9dK_18SptUq-oO28SbJfbCbThBRmf5HoJ8SGx1q8g8HefUOraSjS4upeOIsuLD00/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM%20(2).jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhI-suML4qqlw4ajJqkdxspcLeQx3HLH3IXA2c63JNZixP9kCgbQckr47cIj2szJiaNfBChVrhislKM5pNB256WP1DXIb-lvOq-qXCp6j2wj5f9ro_eX4KvCjXvtmhBFFPN4gIEoZluG5B8h1j_hEKYNY1_t6Krt1tL-1VBIOac4x11Iy1axMlqKKCoZV0/s320/WhatsApp%20Image%202026-11-02%20at%209.14.52%20PM.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzckD_gbP3QI1cmpEy6coygeVUY1GboAq1xKxV533oI2wHjnlN2FaY6FQUoOSEGScTFIz6z80n9qrZDSbyXMSq27JBkUQp9UyQoYJREK7iVpaQn_Qz8DskeVo-zHEwhGGWCBsDcCyX65GCHGO_tiBP3lGrkxTBMaXWikKpYP_40wXljthR1Anz5qEW_y0/s1600/2.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGwj_UFGwUxTgjPVyz-uJ5IPsXhCC5If2wEn2E_G3-GPLhJP_5j-Bhu14-Nggpg7jPbG65wW97RRX3QWhpWBC5QTIskTylj9P2rEg-t8KIKs8BqYZlOPeQGGmxF4w3YOCRjNrIpgtifmscwYst1ztFtDem0m7teDXb62fFBwFxydGPPewk6WLeZCvEBSQ/s1600/1.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgINsUYfGybgL90t0nrsmi5Y1FcT2o0hU45fIreJ9QvNKK6qKi50arNCClrahNKglHkr8n-IHzdm9g5oSGJdvujjQtRikOhfv3VSecNreSlWVxQLCLu_6rc2VYorfIDx-FiVreP1VH5QjOFok6gkh9ZvfnAzu9b0h1n0fF434A3GWi8nYu3mnU1x3xJ9I/s1600/WhatsApp%20Image%202026-11-04%20at%204.48.20%20PM.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha1ClyHPbmREQaNiFVc39TwPyOhSIFmNQcWvZoL8tdExPuO2dRmBXK5WEBk979-b430fUMRs6xW2CufiMbBDfLvGZnejxtNLQJV6ZVyL8A01T8l0VTasaJuzkzohVc4RWvHxMP3zOdq4ZZZWnt_65BWXDbwXGsCSY5sp_g1wrQ0oTRXk0ntBV0sLRlQ0A/s1600/4.jpeg',
-       ]
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha1ClyHPbmREQaNiFVc39TwPyOhSIFmNQcWvZoL8tdExPuO2dRmBXK5WEBk979-b430fUMRs6xW2CufiMbBDfLvGZnejxtNLQJV6ZVyL8A01T8l0VTasaJuzkzohVc4RWvHxMP3zOdq4ZZZWnt_65BWXDbwXGsCSY5sp_g1wrQ0oTRXk0ntBV0sLRlQ0A/s1600/4.jpeg'
+    ]
   },
   {
     category: 'Pencil Arts',
@@ -3194,4 +3232,3 @@ if (navToggle && siteNav) {
 </script>
 </body>
 </html>
- 
