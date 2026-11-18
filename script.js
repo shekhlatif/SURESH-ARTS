@@ -528,35 +528,39 @@ if (form) {
 }
 
 
-/* Accessible mobile navigation */
+
+/* MOBILE NAVIGATION TOGGLE */
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.getElementById("site-nav");
 
 if (navToggle && siteNav) {
-  const closeMobileNav = () => {
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Open navigation menu");
-    siteNav.classList.remove("is-open");
-  };
 
-  navToggle.addEventListener("click", () => {
-    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
-    siteNav.classList.toggle("is-open", !isOpen);
-  });
+    navToggle.addEventListener("click", () => {
 
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMobileNav);
-  });
+        const isOpen =
+            navToggle.getAttribute("aria-expanded") === "true";
 
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".nav")) closeMobileNav();
-  });
+        navToggle.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 700) closeMobileNav();
-  });
+        siteNav.classList.toggle("is-open", !isOpen);
+
+    });
+
+    siteNav.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            siteNav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
 }
 
 /* Accessible mobile floating contact menu */
