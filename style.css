@@ -1759,110 +1759,28 @@ footer .muted {
 }
 
 
-/* User-requested WhatsApp icon visibility adjustment */
-.floating-social.floating-whatsapp {
-  width: 72px !important;
-  height: 72px !important;
-  right: 25px !important;
-  bottom: 25px !important;
-  padding: 0 !important;
-}
-
-.floating-social.floating-whatsapp img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  object-fit: cover !important;
-  transform: scale(1.28);
-  transform-origin: center;
-}
-
-.floating-social.floating-whatsapp:hover img {
-  transform: scale(1.38);
-}
-
-@media (max-width: 650px) {
-  .floating-social.floating-whatsapp {
-    width: 62px !important;
-    height: 62px !important;
-    right: 16px !important;
-    bottom: 16px !important;
-  }
-  .floating-social.floating-whatsapp img {
-    transform: scale(1.24);
-  }
+/* Unified SureshArt wordmark — handcrafted lettering matching the art-studio identity */
+.logo, .logo span, .footer-logo, .footer-logo span {
+  font-family: 'Architects Daughter', cursive !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
 }
 
 
-/* Final WhatsApp visibility sizing requested by the site owner */
-.floating-social.floating-whatsapp {
-  width: 80px !important;
-  height: 80px !important;
-  right: 25px !important;
-  bottom: 25px !important;
-  overflow: hidden;
-  border-radius: 50%;
+/* Compact outlined category labels in the scrolling art-services strip */
+.marquee-track {
+  align-items: center;
+  gap: 9px !important;
 }
-
-.floating-social.floating-whatsapp img {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  object-fit: cover !important;
-  transform: scale(1.42);
-  transform-origin: center;
-}
-
-.floating-social.floating-whatsapp:hover img {
-  transform: scale(1.52);
-}
-
-@media (max-width: 650px) {
-  .floating-social.floating-whatsapp {
-    width: 68px !important;
-    height: 68px !important;
-    right: 16px !important;
-    bottom: 16px !important;
-  }
-  .floating-social.floating-whatsapp img {
-    transform: scale(1.38);
-  }
-}
-
-
-/* Mobile hero CTA sizing: both actions fill the available screen width */
-@media (max-width: 650px) {
-  .hero .cta-row,
-  .hero-copy .cta-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    gap: 12px !important;
-  }
-
-  .hero .cta-row .btn,
-  .hero-copy .cta-row .btn,
-  .hero .cta-row .btn:last-child,
-  .hero-copy .cta-row .btn:last-child {
-    display: flex !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    min-height: 58px !important;
-    grid-column: auto !important;
-    justify-content: center !important;
-    padding: 15px 18px !important;
-    font-size: 14px !important;
-    box-sizing: border-box !important;
-  }
-}
-
-/* Keep the hero portrait image cleanly cropped */
-.hero-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.marquee-track span {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 4px 11px !important;
+  margin: 0 !important;
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 999px;
+  font-size: 10px !important;
+  line-height: 1.35;
+  letter-spacing: 1px !important;
+  white-space: nowrap;
 }
