@@ -2228,3 +2228,48 @@ footer {
   .nav-whatsapp-header { padding-inline: 10px !important; font-size: 10px !important; }
   .nav-toggle { flex-basis: 38px !important; width: 38px !important; height: 38px !important; }
 }
+
+
+/* FINAL REQUEST: WhatsApp beside logo on mobile + animated art categories */
+@media (max-width: 700px) {
+  .nav { justify-content: flex-start !important; gap: 10px !important; }
+  .nav > .logo-mark { order: 1 !important; }
+  .nav > .nav-whatsapp-header {
+    display: inline-flex !important;
+    order: 2 !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 8px 13px !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+  .nav > .nav-toggle { order: 3 !important; margin-left: auto !important; }
+  .nav > #site-nav { order: 4 !important; }
+}
+
+/* Desktop/laptop: WhatsApp remains only in the floating contact menu. */
+@media (min-width: 701px) {
+  .nav > .nav-whatsapp-header { display: none !important; }
+}
+
+/* Smooth continuous category ticker: Acrylic | Wall Art | Murals | Canvas */
+.marquee { overflow: hidden !important; }
+.marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  will-change: transform;
+  animation: sureshCategoryTicker 28s linear infinite !important;
+}
+.marquee-track span { flex: 0 0 auto; }
+@keyframes sureshCategoryTicker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-duration: 60s !important; }
+}
