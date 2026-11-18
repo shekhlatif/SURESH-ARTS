@@ -73,7 +73,11 @@ const galleryData = [
     images: [
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzckD_gbP3QI1cmpEy6coygeVUY1GboAq1xKxV533oI2wHjnlN2FaY6FQUoOSEGScTFIz6z80n9qrZDSbyXMSq27JBkUQp9UyQoYJREK7iVpaQn_Qz8DskeVo-zHEwhGGWCBsDcCyX65GCHGO_tiBP3lGrkxTBMaXWikKpYP_40wXljthR1Anz5qEW_y0/s1600/2.jpeg',
       'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGwj_UFGwUxTgjPVyz-uJ5IPsXhCC5If2wEn2E_G3-GPLhJP_5j-Bhu14-Nggpg7jPbG65wW97RRX3QWhpWBC5QTIskTylj9P2rEg-t8KIKs8BqYZlOPeQGGmxF4w3YOCRjNrIpgtifmscwYst1ztFtDem0m7teDXb62fFBwFxydGPPewk6WLeZCvEBSQ/s1600/1.jpeg',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha1ClyHPbmREQaNiFVc39TwPyOhSIFmNQcWvZoL8tdExPuO2dRmBXK5WEBk979-b430fUMRs6xW2CufiMbBDfLvGZnejxtNLQJV6ZVyL8A01T8l0VTasaJuzkzohVc4RWvHxMP3zOdq4ZZZWnt_65BWXDbwXGsCSY5sp_g1wrQ0oTRXk0ntBV0sLRlQ0A/s1600/4.jpeg'
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha1ClyHPbmREQaNiFVc39TwPyOhSIFmNQcWvZoL8tdExPuO2dRmBXK5WEBk979-b430fUMRs6xW2CufiMbBDfLvGZnejxtNLQJV6ZVyL8A01T8l0VTasaJuzkzohVc4RWvHxMP3zOdq4ZZZWnt_65BWXDbwXGsCSY5sp_g1wrQ0oTRXk0ntBV0sLRlQ0A/s1600/4.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguVCLFC03dsaLLwIA6YenjuC6b9VsMLvViswRqdqjEiyQZeEoyMsqYHtkdjBLEsKyYtr1xbsG670nFVxZQ2EBavA4KbheeA0p-vDPOCZtR8VLRcnLaOFSZ1N_fW_HN8xGXxMARdPbNpsxjVAiYVJf_SpicX9kFle5z2b1UnW3zyToYMX2KfiSjbjwlPMo/s320/land%20scape%20painting%2011.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAwFm45UBPZIiW9uEy0X5xgIU447R-dB13_MQLmXV1zXOnHuVCPtAWQDckhnhXW_qHvg85Ux8kcy3ZuwGkFfrvyD3_xEzp_EkmOV-5qQ6dP25HcTSc2PaNkde4iwKtqzuIQWdOHV7JFKg1XBJssnOLM-l4UshsXPLpy6CM0RF3k9M4J3HAgOdKlpYgLxw/s320/land%20scape%20painting%204.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU6yLm8JTMDrMbyaLnTbqM8_Gq-AFZRhXEdV4xrA-0nP_1qOSutAj6FyFwaNepngkHJvk0EcQ7h92bNe1cqRr1tQIWcHT2wX1goanP5sjNz91lENSBWWfU3nOL1OdIrNiK59jBesa-LY_7jTzcULjgdcx5xtKcwapbFwtKoJH7MfVq2pZXrH2ltkq4irY/s320/land%20scape%20painting%203.jpeg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrmVj31ZcCK6A9DAhEV6Fb4OfACsO8CZBIcGDN44RyIFqUs1bCSde2s2l3jhn2SPZ2FNxOboWp5e01dLftkShl1VuWESODcefL_hnWO2bm3YmF5DIBGp2oiI5k9vyAVczWt2Hwf5HfaBK-Q0j97WXGoxHmX513zE7gxb0FtOCzb6S5skKsKVBiAH46_7s/s320/land%20scape%20painting%202.jpeg'
     ]
   },
   {
@@ -103,12 +107,10 @@ const categoryImages = Object.fromEntries(galleryData.map((group) => [group.cate
 const services = [
   ["Acrylic Painting", "Premium acrylic artwork for homes, studios and gifting.", categoryImages["Acrylic Paintings"][0]],
   ["Landscape Painting", "Scenic hand-painted landscapes with rich color depth.", categoryImages["Landscape Paintings"][0]],
-  ["Pencil Portraits", "Detailed graphite portraits from your favorite photo.", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVzMXGp_w-vfqDItF1Y7_jO_APkz5vFLbtk0IZM2HZcv0VZrnurNcOBbZlWfh_SzDG2Oa0Fixtx-6aUdh0gq_u8O2VbLSUpqIAHzee-xe1OsiUhC-rCF277TYwEJvcVK1hN2-jIh0tQAq0jxftddHecJv5Gxj38Xvvp1253QwUGg_TYc5OR6PlMP3CSWU/s1600/WhatsApp%20Image%202026-11-07%20at%208.35.13%20AM.jpeg"],
-  ["Wall Painting", "Custom wall art for homes, cafes, schools and offices.", categoryImages["Wall Paintings"][0]],
+  ["Pencil Portraits", "Detailed graphite portraits from your favorite photo.", categoryImages["Pencil Arts"][0]],
+  ["Wall Painting", "Custom wall art for homes, cafes, schools and offices.", categoryImages["Wall Paintings"][41]],
   ["Custom Murals", "Large-scale mural concepts designed around your space.", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUiDelqg-X5gl1MKG3kYSOcdefxrKXg4dj-l6HADl4EwCT1q66-TR-8TOJWVRJEpGTJ9aC2bbIEplemPwQb6dSmWe1rvJ2LqoiPA3NQs5qj7dfyetAui9D7rOwcFNx02cCXyEtyfBYGQMlfX3w_9lMCrplvnrAASatIK21CZ6GVLBFRfgaygoMCIkZBG4/s1600/walll%20painting%20custom%20mural%20image.jpeg"],
-  ["Canvas Art", "Ready-to-display canvas paintings with premium finish.", categoryImages["Landscape Paintings"][1]],
-  ["Name Boards", "Hand-painted signs and name boards with artistic lettering.", categoryImages["Wall Paintings"][5]],
-  ["Custom Orders", "Share an idea and commission a one-of-a-kind artwork.", categoryImages["Pencil Arts"][3]]
+  ["Canvas Art", "Ready-to-display canvas paintings with premium finish.", categoryImages["Acrylic Paintings"][5]],
 ];
 
 /* =========================================
@@ -119,6 +121,7 @@ const services = [
 const bgCanvas = document.getElementById("bg-canvas");
 
 if (bgCanvas) {
+  try {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     48,
@@ -346,6 +349,10 @@ if (bgCanvas) {
       animateArtTools();
     }
   });
+  } catch (error) {
+    console.warn("Decorative 3D background unavailable; gallery will continue normally.", error);
+  }
+
 }
 
 const tabs = document.getElementById("category-tabs");
@@ -358,6 +365,10 @@ const lightboxCaption = document.getElementById("lightbox-caption");
 const lightboxClose = document.getElementById("lightbox-close");
 const lightboxPrev = document.getElementById("lightbox-prev");
 const lightboxNext = document.getElementById("lightbox-next");
+
+if (!tabs || !gallery || !featuredGrid || !servicesGrid || !lightbox || !lightboxImg || !lightboxCaption || !lightboxClose) {
+  console.error("Suresh Arts: One or more required gallery/lightbox HTML elements are missing.");
+}
 let lightboxItems = [];
 let lightboxIndex = 0;
 
@@ -451,13 +462,14 @@ function observeReveals() {
   document.querySelectorAll(".reveal:not(.visible)").forEach((el) => revealObserver.observe(el));
 }
 
-renderTabs();
-renderFeatured();
-renderGallery();
-renderServices();
-observeReveals();
+if (tabs && gallery && featuredGrid && servicesGrid && lightbox && lightboxImg && lightboxCaption && lightboxClose) {
+  renderTabs();
+  renderFeatured();
+  renderGallery();
+  renderServices();
+  observeReveals();
 
-tabs.addEventListener("click", (e) => {
+  tabs.addEventListener("click", (e) => {
   const button = e.target.closest(".tab");
   if (!button) return;
   tabs.querySelectorAll(".tab").forEach((tab) => {
@@ -511,5 +523,63 @@ if (form) {
       `Email: ${d.get("email") || ""}%0ARequirement: ${d.get("need") || ""}%0A` +
       `Message: ${d.get("message") || ""}`;
     window.open(`https://wa.me/917019920839?text=${msg}`, "_blank");
+  });
+}
+}
+
+
+/* Accessible mobile navigation */
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.getElementById("site-nav");
+
+if (navToggle && siteNav) {
+  const closeMobileNav = () => {
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open navigation menu");
+    siteNav.classList.remove("is-open");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    siteNav.classList.toggle("is-open", !isOpen);
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav")) closeMobileNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) closeMobileNav();
+  });
+}
+
+/* Accessible mobile floating contact menu */
+const floatingContact = document.querySelector('.floating-contact');
+const floatingContactToggle = document.querySelector('.floating-contact-toggle');
+if (floatingContact && floatingContactToggle) {
+  const closeFloatingContact = () => {
+    floatingContact.classList.remove('is-open');
+    floatingContactToggle.setAttribute('aria-expanded', 'false');
+    floatingContactToggle.setAttribute('aria-label', 'Open contact links');
+  };
+
+  floatingContactToggle.addEventListener('click', () => {
+    const isOpen = floatingContact.classList.toggle('is-open');
+    floatingContactToggle.setAttribute('aria-expanded', String(isOpen));
+    floatingContactToggle.setAttribute('aria-label', isOpen ? 'Close contact links' : 'Open contact links');
+  });
+
+  floatingContact.querySelectorAll('.floating-social').forEach((link) => {
+    link.addEventListener('click', closeFloatingContact);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.floating-contact')) closeFloatingContact();
   });
 }
